@@ -39,6 +39,8 @@ file on disk, which you can later execute by passing the file to
 is primarily intended for when
 [running Terraform in automation](https://learn.hashicorp.com/tutorials/terraform/automate-terraform?in=terraform/automation&utm_source=WEBSITE&utm_medium=WEB_IO&utm_offer=ARTICLE_PAGE&utm_content=DOCS).
 
+You can use the optional `out=FILE` option with `> FILE.EXT -no-color` to export a human-readable plan, which allows users to read the plan that has been created.  This output is necessary for users to read and understand the plan that machine-readable plan which `terraform plan` produces. 
+
 If you run `terraform plan` without the `-out=FILE` option then it will create
 a _speculative plan_, which is a description of the effect of the plan but
 without any intent to actually apply it.
